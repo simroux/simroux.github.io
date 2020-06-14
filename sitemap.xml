@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://simroux.github.io/</loc>
-  </url>
-  
-  <url>
     <loc>https://simroux.github.io/authors/</loc>
   </url>
   
@@ -28,6 +24,10 @@
   
   <url>
     <loc>https://simroux.github.io/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://simroux.github.io/</loc>
   </url>
   
   <url>

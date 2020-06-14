@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Simon Roux",
+  "short_name": "Simon Roux",
   "lang": "en-us",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#2962ff",
+  "background_color": "#2962ff",
   "icons": [{
     "src": "/images/icon_hudcd504423819504d86a4be24c22d993f_62405_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",
