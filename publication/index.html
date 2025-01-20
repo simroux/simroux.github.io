@@ -205,6 +205,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=%7b%7d"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', '{}', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -216,8 +254,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hudcd504423819504d86a4be24c22d993f_62405_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hudcd504423819504d86a4be24c22d993f_62405_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu7542497146199104341.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9414133254159730754.png">
 
   <link rel="canonical" href="https://simroux.github.io/publication/">
 
@@ -311,7 +349,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/"><img src="/images/logo_hu7a5e3ae3ac24c71dc657f14197b43842_255303_0x70_resize_lanczos_3.png" alt="Simon Roux"></a>
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu13903402681714629955.png" alt="Simon Roux"></a>
     </div>
     
 
@@ -324,7 +362,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/"><img src="/images/logo_hu7a5e3ae3ac24c71dc657f14197b43842_255303_0x70_resize_lanczos_3.png" alt="Simon Roux"></a>
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu13903402681714629955.png" alt="Simon Roux"></a>
     </div>
     
 
@@ -711,7 +749,7 @@
     
     
     
-    <script src="/js/academic.min.3da86581634ab22d5bb3fc4505df30a5.js"></script>
+    <script src="/js/academic.min.8741d44cdc5fc49466a5835d1bbea364.js"></script>
 
     
 

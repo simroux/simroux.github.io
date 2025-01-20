@@ -12,5 +12,15 @@
       <link>https://simroux.github.io/author/simon-roux/</link>
     </image>
     
+    <item>
+      <title>Simon Roux</title>
+      <link>https://simroux.github.io/author/simon-roux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://simroux.github.io/author/simon-roux/</guid>
+      <description>&lt;p&gt;At the DOE Joint Genome Institute, I lead the Viral Genomics group where we explore viruses of microbes and their impacts on ecosystems using (mostly) fancy &amp;lsquo;omics tools. Our current projects include the study of viral diversity and virus:host interactions in soil and freshwater environments, along with the development of new bioinformatics tools and experimental protocols to probe and characterize uncultivated viruses. We also assist users of the JGI Metagenome Program with their analysis, including identification of viral sequences, functional annotation, taxonomic classification, etc.&lt;/p&gt;
+&lt;p&gt;The long-term goal of my research is to understand the ecological and evolutionary drivers of virus:host dynamics in natural microbial communities. This research involves a mix of experimental and computational approaches spanning from the molecular to the ecosystem scale, trying to address fundamental questions like &amp;ldquo;how do viruses spread and adapt across environments ?&amp;rdquo;, &amp;ldquo;how do viruses take over and reprogram microbial cells ?&amp;rdquo;, and &amp;ldquo;how do viral infections alter ecosystem processes ?&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

@@ -205,6 +205,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=%7b%7d"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', '{}', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -218,8 +256,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hudcd504423819504d86a4be24c22d993f_62405_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hudcd504423819504d86a4be24c22d993f_62405_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu7542497146199104341.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9414133254159730754.png">
 
   <link rel="canonical" href="https://simroux.github.io/">
 
@@ -244,7 +282,7 @@
   <meta property="og:description" content="Personal website - Simon Roux"><meta property="og:image" content="https://simroux.github.io/img/Capsid_logo.jpg">
   <meta property="twitter:image" content="https://simroux.github.io/img/Capsid_logo.jpg"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-06-28T00:00:00&#43;01:00">
   
 
   
@@ -321,7 +359,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/"><img src="/images/logo_hu7a5e3ae3ac24c71dc657f14197b43842_255303_0x70_resize_lanczos_3.png" alt="Simon Roux"></a>
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu13903402681714629955.png" alt="Simon Roux"></a>
     </div>
     
 
@@ -334,7 +372,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/"><img src="/images/logo_hu7a5e3ae3ac24c71dc657f14197b43842_255303_0x70_resize_lanczos_3.png" alt="Simon Roux"></a>
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu13903402681714629955.png" alt="Simon Roux"></a>
     </div>
     
 
@@ -665,7 +703,7 @@
 
       
       
-      <img class="avatar avatar-circle" src="/author/simon-roux/avatar_hu30f5a53a1e57229ce4fa325bcf88dffa_268990_270x270_fill_lanczos_center_3.png" alt="Simon Roux">
+      <img class="avatar avatar-circle" src="/author/simon-roux/avatar_hu12101772639244393882.png" alt="Simon Roux">
       
 
       <div class="portrait-title">
@@ -884,26 +922,22 @@ We plan to study viral diversity and virus:host interactions in two model system
 <a href="https://eesa.lbl.gov/profiles/eoin-brodie/#other-web-pages" target="_blank" rel="noopener">Brodie Lab</a> and the 
 <a href="http://www.northenlab.org" target="_blank" rel="noopener">Northen Lab</a>. More information in our latest pre-print - 
 <a href="https://doi.org/10.1101/2023.03.06.531389" target="_blank" rel="noopener">https://doi.org/10.1101/2023.03.06.531389</a> <small>(Pictures courtesy of Tamy Swenson &amp; Brodie Lab)</small></p>
-<p><img src="pictures/iPHoP_logo.png" style="width: 200px; border:2px solid #021a40; border-radius: 20px; margin-left: 5px; opacity: 0.8; filter: drop-shadow(8px 8px 10px gray); float:right" alt="Logo of the iPHoP tool"/> -
-<strong>Computational prediction of virus:host interactions</strong> <br>
-To help with viromics analysis, we have now developed a tool (iPHoP) to integrate multiple signals of virus-host interactions and enable robust prediction of host genus for many uncultivated phages. <b>Now available on <a href=https://anaconda.org/bioconda/iphop>bioconda</a> </b>, and described in the following pre-print:  
-<a href="https://doi.org/10.1101/2022.07.28.501908" target="_blank" rel="noopener">https://doi.org/10.1101/2022.07.28.501908</a> .</p>
 <p><img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/thumbnail/public/img7977.jpg?itok=TOtl1jgc" style="width: 200px; border:2px solid #021a40; border-radius: 20px; margin-left: 5px; opacity: 1; filter: drop-shadow(8px 8px 10px gray); float:right" alt="Picture of Mushroom Spring in YNP"/> -
 <strong>Virus:host dynamics in Yellowstone National Park biofilms</strong> <br>
 We study virus:host dynamics across diel cycles in Octopus and Mushroom springs based on coupled metagenomics, metatranscriptomics, and viral metagenomics, to better understand phage infection triggers and synchronization in natural communities. In collaboration with the 
 <a href="https://carnegiescience.edu/dr-devaki-bhaya" target="_blank" rel="noopener">Bhaya Lab</a>. <small>(Picture: USGS / Thomas Brock)</small></p>
+<p><img src="pictures/HVP.png" style="width: 300px; border:2px solid #021a40; border-radius: 10px; margin-left: 5px; opacity: 0.8; filter: drop-shadow(8px 8px 10px gray); float:right" alt="Logo of the iPHoP tool"/> -
+<strong>Defining the healthy human virome</strong> <br>
+The JGI Viral Genomics group is involved in the new NIH-funded Human Virome Program 
+<a href="https://commonfund.nih.gov/humanvirome" target="_blank" rel="noopener">https://commonfund.nih.gov/humanvirome</a>. We will help develop new tools and resources for viral taxonomy databases, host prediction, and viral genome annotation.</p>
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S2589004222003911-fx1.jpg" style="width: 200px; border:2px solid #021a40; border-radius: 20px; margin-left: 5px; opacity: 1; filter: drop-shadow(8px 8px 10px gray); float:right" alt="MVP pipeline logo"/> -
+<strong>Establishing the foundations of a high-throughput phage foundry</strong>  <br> Analyzing and modeling phage diversity and phage:host interactions to better understand how microbiomes can be altered and manipulated through the addition of (engineered) phages. Project led by 
+<a href="https://biosciences.lbl.gov/profiles/vivek-mutalik/" target="_blank" rel="noopener">Vivek Mutalik</a></p>
 <p><img src="pictures/Viruses_1.png" style="width: 180px; border:2px solid #021a40; border-radius: 20px; margin-left: 10px; margin-right: 10px; opacity: 1; filter: drop-shadow(8px 8px 10px gray); float:right" alt="Illustration of viral capsids"/>  -
 <strong>IMG/VR - Large-scale exploration of uncultivated viral diversity</strong>  <br>
 We routinely mine public genomes, metagenomes, and metatranscriptomes for new viral sequences to progressively build a large and comprehensive genomic catalog of the virosphere. <b> IMG/VR v4 now released ! </b> More into in the 
 <a href="#tools">tools section</a> <small>(Viral capsids drawing from Leah Pantea / 
 <a href="http://leahpantea.com" target="_blank" rel="noopener">http://leahpantea.com</a>)</small></p>
-<p><img src="https://gitlab.com/ccoclet/mvp/-/raw/main/images/MVP_Logo.png" style="width: 200px; border:2px solid #021a40; border-radius: 20px; margin-left: 5px; opacity: 1; filter: drop-shadow(8px 8px 10px gray); float:right" alt="MVP pipeline logo"/> -
-<strong>Towards a user-friendly viral ecogenomics toolkit</strong>  <br> Developing tools to identify, clean, compare, and annotate uncultivated viral genomes (mostly) assembled from metagenomes. Currently gathered in the 
-<a href="https://gitlab.com/ccoclet/mvp/" target="_blank" rel="noopener">MVP pipeline</a>, developed by Clement Coclet. See also the 
-<a href="#tools">tools section</a></p>
-<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S2589004222003911-fx1.jpg" style="width: 200px; border:2px solid #021a40; border-radius: 20px; margin-left: 5px; opacity: 1; filter: drop-shadow(8px 8px 10px gray); float:right" alt="MVP pipeline logo"/> -
-<strong>Establishing the foundations of a high-throughput phage foundry</strong>  <br> Analyzing and modeling phage diversity and phage:host interactions to better understand how microbiomes can be altered and manipulated through the addition of (engineered) phages. Project led by 
-<a href="https://biosciences.lbl.gov/profiles/vivek-mutalik/" target="_blank" rel="noopener">Vivek Mutalik</a></p>
 
     </div>
   
@@ -974,6 +1008,8 @@ We routinely mine public genomes, metagenomes, and metatranscriptomes for new vi
 <a href="https://bitbucket.org/srouxjgi/iphop/" target="_blank" rel="noopener">https://bitbucket.org/srouxjgi/iphop/</a> -
 
 <a href="https://bioconda.github.io/recipes/iphop/README.html" target="_blank" rel="noopener">https://bioconda.github.io/recipes/iphop/README.html</a></li>
+<li><strong>&ndash; NEW &ndash; SpacerExtractor</strong> Identify, extract, and post-process CRISPR spacers from metagenome reads at scale -  
+<a href="https://code.jgi.doe.gov/SRoux/spacerextractor" target="_blank" rel="noopener">https://code.jgi.doe.gov/SRoux/spacerextractor</a></li>
 </ul>
 
     </div>
@@ -1744,7 +1780,7 @@ showSlides(slideIndex);
     
     
     
-    <script src="/js/academic.min.3da86581634ab22d5bb3fc4505df30a5.js"></script>
+    <script src="/js/academic.min.8741d44cdc5fc49466a5835d1bbea364.js"></script>
 
     
 
